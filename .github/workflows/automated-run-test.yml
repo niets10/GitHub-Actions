@@ -1,4 +1,4 @@
-name: Run Test Classes
+name: Automated Run Test Classes
 
 on:
   push:
