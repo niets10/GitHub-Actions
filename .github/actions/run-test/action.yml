@@ -12,7 +12,7 @@ runs:
     - name: Install SFDX
       shell: bash
       run: |
-        npm install --global sfdx-cli
+        npm install --global @salesforce/cli
         sfdx --version
     - name: Login To Org
       shell: bash
@@ -21,4 +21,4 @@ runs:
     - name: Run Test Classes
       shell: bash
       run: |
-        sfdx apex run test -l RunLocalTests -w 15
+        sf apex run test -o GA-Sandbox -l RunLocalTests -w 15
