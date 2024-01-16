@@ -14,10 +14,11 @@ runs:
       run: |
         npm install --global @salesforce/cli
         sfdx --version
+        echo "How are you?"
     - name: Login To Org
       shell: bash
       run: |
-        sfdx org login sfdx-url --set-default --sfdx-url-file <(echo "${{ inputs.sfdx_auth_url }}")
+        sf org login sfdx-url --set-default --sfdx-url-file <(echo "${{ inputs.sfdx_auth_url }}")
     - name: Run Test Classes
       shell: bash
       run: |
