@@ -2,6 +2,7 @@
 private class MyClassTest {
     @isTest
     private static void myUnitTest() {
-        new MyClass().firstMethod(1, 2);
+        Integer result = new MyClass().firstMethod(4, 2);
+        Assert.areEqual(2, result, 'The result does not match');
     }
 }
