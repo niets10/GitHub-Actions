@@ -1,5 +1,5 @@
-name: Deploy To Environment
-description: Deploys to a specified environment
+name: Runs test in environment
+description: Runs apex tests in a specific environment
 
 inputs:
   sfdx_auth_url:

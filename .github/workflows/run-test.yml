@@ -13,7 +13,7 @@ on:
         required: true
 
 jobs:
-  deploy-partial-sandbox:
+  run-in-sandbox:
     runs-on: ubuntu-latest
     if: ${{ github.event.inputs.environment == 'sandbox' }}
     steps:
@@ -23,7 +23,7 @@ jobs:
         with:
           sfdx_auth_url: ${{ secrets.SFDX_AUTH_URL_SANDBOX }}
 
-  deploy-prod:
+  run-in-prod:
     runs-on: ubuntu-latest
     if: ${{ github.event.inputs.environment == 'production' }}
     steps:
