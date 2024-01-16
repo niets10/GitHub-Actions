@@ -11,10 +11,6 @@ on:
           - production
         default: "partial-sandbox"
         required: true
-      validateOnly:
-        description: "Run the deployment as validation only"
-        type: boolean
-        default: false
 
 jobs:
   deploy-partial-sandbox:
