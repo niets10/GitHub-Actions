@@ -22,4 +22,4 @@ runs:
     - name: Run Test Classes
       shell: bash
       run: |
-        sf apex run test -o GA-Sandbox -l RunLocalTests -w 15
+        sf apex run test -l RunLocalTests -w 15
