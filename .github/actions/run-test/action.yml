@@ -1,0 +1,21 @@
+name: Deploy To Environment
+description: Deploys to a specified environment
+
+inputs:
+  sfdx_auth_url:
+    description: "The auth url tied to your deployment environment"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install SFDX
+      run: |
+        npm install --global sfdx-cli
+        sfdx --version
+    - name: Login To Org
+      run: |
+        sfdx org login sfdx-url --set-default --sfdx-url-file <(echo "${{ inputs.sfdx_auth_url }}")
+    - name: Run Test Classes
+      run: |
+        sfdx apex run test -l RunLocalTests -w 15
