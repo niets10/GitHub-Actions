@@ -1,7 +1,7 @@
 public with sharing class MyClass {
-    public void firstMethod() {
+    public void firstMethod(Integer x, Integer y) {
         System.debug('My Class! :)!');
-        Integer i = 0;
-        System.debug(i);
+        Integer result = x + y;
+        result result;        
     }
 }
