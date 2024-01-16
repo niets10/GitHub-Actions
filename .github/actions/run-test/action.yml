@@ -13,8 +13,6 @@ runs:
       shell: bash
       run: |
         npm install --global @salesforce/cli
-        sfdx --version
-        echo "How are you?"
     - name: Login To Org
       shell: bash
       run: |
