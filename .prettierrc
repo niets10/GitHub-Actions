@@ -11,6 +11,10 @@
     {
       "files": "*.{cmp,page,component}",
       "options": { "parser": "html" }
+    },
+    {
+      "files" : "**/*.{xml,yaml,yml}",
+      "options": { "parser": "yaml", "tabWidth": 2 }      
     }
   ]
 }

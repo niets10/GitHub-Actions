@@ -1,15 +1,15 @@
 name: Schedule Run Test Classes
 
 on:
-    schedule:
-        - cron: "40 1 * * *"
+  schedule:
+    - cron: "5 2 * * *"
 
 jobs:
-    run-in-sandbox:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
-            - name: Run test in sandbox
-              uses: ./.github/actions/run-test
-              with:
-                  sfdx_auth_url: ${{ secrets.SFDX_AUTH_URL_SANDBOX }}
+  run-in-sandbox:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run test in sandbox
+        uses: ./.github/actions/run-test
+        with:
+          sfdx_auth_url: ${{ secrets.SFDX_AUTH_URL_SANDBOX }}
